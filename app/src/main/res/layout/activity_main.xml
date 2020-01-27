@@ -49,25 +49,27 @@
                 android:orientation="vertical" >
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/main_card_recommend"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackground"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="60dp"
+                        android:layout_margin="50dp"
                         android:orientation="vertical"
                         android:gravity="center">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="오늘의 추천 이름"
+                            android:text="추천 이름"
                             android:textColor="@color/colorMain"
                             android:textSize="20sp"/>
 
@@ -79,16 +81,25 @@
                             android:textSize="35sp"
                             android:textStyle="bold"/>
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40sp"
+                            android:text="눌러서 자세히 보기"
+                            android:textColor="@color/colorMain" />
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/main_card_random"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/colorMain"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp">
@@ -106,7 +117,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="생각하기 귀찮다면\n랜덤 이름 짓기"
+                            android:text="랜덤 이름 찾기"
                             android:textColor="@android:color/white"
                             android:textSize="20sp"
                             android:textStyle="bold"/>
@@ -116,11 +127,13 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/main_card_simple"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/colorMain"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp">
@@ -138,7 +151,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="집에 가고 싶다면\n해외 스포츠 선수 이름 짓기"
+                            android:text="간단한 영어 이름"
                             android:textColor="@android:color/white"
                             android:textSize="20sp"
                             android:textStyle="bold"/>
@@ -148,11 +161,13 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/main_card_sports"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackground"
                     app:cardBackgroundColor="@color/colorMain"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp">
@@ -170,7 +185,41 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="집에 가고 싶다면\n해외 가수 이름 짓기"
+                            android:text="스포츠 선수 이름"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/main_card_singer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorMain"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="60dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical"
+                        android:gravity="center|start">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="유명 가수 이름"
                             android:textColor="@android:color/white"
                             android:textSize="20sp"
                             android:textStyle="bold"/>
