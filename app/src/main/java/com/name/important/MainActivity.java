@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, SplashActivity.class));
 
-        findViewById(R.id.main_card_recommend).setOnClickListener(cardViewClickListener);
+        findViewById(R.id.main_card_name).setOnClickListener(cardViewClickListener);
         findViewById(R.id.main_card_random).setOnClickListener(cardViewClickListener);
         findViewById(R.id.main_card_simple).setOnClickListener(cardViewClickListener);
         findViewById(R.id.main_card_sports).setOnClickListener(cardViewClickListener);
@@ -28,12 +28,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.main_card_recommend:
-                    Toast.makeText(getApplicationContext(), "준비중입니다(추천 이름)", Toast.LENGTH_SHORT).show();
-                    break;
-
-                case R.id.main_card_random:
-                    Toast.makeText(getApplicationContext(), "준비중입니다(랜덤 이름)", Toast.LENGTH_SHORT).show();
+                case R.id.main_card_name:
+                    Toast.makeText(getApplicationContext(), "준비중입니다", Toast.LENGTH_SHORT).show();
                     break;
 
                 case R.id.main_card_simple:
@@ -46,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.main_card_singer:
                     Toast.makeText(getApplicationContext(), "준비중입니다(유명 가수 이름)", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case R.id.main_card_random:
+                    Toast.makeText(getApplicationContext(), "준비중입니다(랜덤 이름)", Toast.LENGTH_SHORT).show();
                     break;
             }
         }

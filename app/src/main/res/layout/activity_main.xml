@@ -24,6 +24,13 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:contentScrim="@color/appBackground">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_main_header"
+                    android:alpha="0.2"
+                    app:layout_collapseMode="parallax"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -49,7 +56,7 @@
                 android:orientation="vertical" >
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/main_card_recommend"
+                    android:id="@+id/main_card_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -69,7 +76,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="추천 이름"
+                            android:text="나의 영어 이름"
                             android:textColor="@color/colorMain"
                             android:textSize="20sp"/>
 
@@ -87,40 +94,6 @@
                             android:layout_marginTop="40sp"
                             android:text="눌러서 자세히 보기"
                             android:textColor="@color/colorMain" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/main_card_random"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="?attr/selectableItemBackground"
-                    app:cardBackgroundColor="@color/colorMain"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
-                        android:layout_marginBottom="60dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:orientation="vertical"
-                        android:gravity="center|start">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="랜덤 이름 찾기"
-                            android:textColor="@android:color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -220,6 +193,40 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="유명 가수 이름"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/main_card_random"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorMain"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="60dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical"
+                        android:gravity="center|start">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="랜덤 이름 찾기"
                             android:textColor="@android:color/white"
                             android:textSize="20sp"
                             android:textStyle="bold"/>
