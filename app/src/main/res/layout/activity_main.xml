@@ -26,16 +26,19 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:src="@drawable/img_main_header"
-                    android:alpha="0.2"
+                    android:alpha="0.15"
+                    android:scaleType="centerCrop"
                     app:layout_collapseMode="parallax"/>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="이름폴턴트에서\n색다른 영어 이름을 지어보자!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="  이름 폴턴트에서\n나만의 영어 이름을 지어보세요!"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorMain"
@@ -83,7 +86,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hello, World!"
+                            android:text="Steve"
                             android:textColor="@color/colorMain"
                             android:textSize="35sp"
                             android:textStyle="bold"/>
@@ -93,6 +96,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="40sp"
                             android:text="눌러서 자세히 보기"
+                            android:textSize="16sp"
                             android:textColor="@color/colorMain" />
 
                     </LinearLayout>

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.main_card_simple:
-                    Toast.makeText(getApplicationContext(), "준비중입니다(간단한 이름)", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "준비중입니다(간단한 영어 이름)", Toast.LENGTH_SHORT).show();
                     break;
 
                 case R.id.main_card_sports:
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.main_card_random:
-                    Toast.makeText(getApplicationContext(), "준비중입니다(랜덤 이름)", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "준비중입니다(랜덤 이름 찾기)", Toast.LENGTH_SHORT).show();
                     break;
             }
         }
