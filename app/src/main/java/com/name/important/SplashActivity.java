@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -62,7 +63,9 @@ public class SplashActivity extends Activity {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account);
             }
-            catch (Exception e) { }
+            catch (Exception e){
+                Log.e("ERROR", e.toString());
+            }
         }
     }
 
@@ -72,13 +75,14 @@ public class SplashActivity extends Activity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
                     String cu = firebaseAuth.getUid();
-                    String email = firebaseAuth.getCurrentUser().getEmail();
+//                    String email = firebaseAuth.getCurrentUser().getEmail();
 
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     intent.putExtra("cu", cu);
 
-                    Toast.makeText(getApplicationContext(), "로그인 성공\n" + email, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "로그인 성공\n" + email, Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 else {
