@@ -44,6 +44,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "880021491619-e7j6um8q3sid9s9l5gu92nbokvrq6kbs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.name.important",
+            "certificate_hash": "2279804e64e330081a7bda2ea25306400827aba3"
+          }
+        },
+        {
           "client_id": "880021491619-33bn96146mtr0ddmdckg4g5iqsqoge6k.apps.googleusercontent.com",
           "client_type": 3
         }
