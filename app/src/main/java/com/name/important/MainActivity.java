@@ -33,21 +33,27 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.main_card_simple:
-                    startActivity(new Intent(MainActivity.this, SearchOptionsActivity.class));
+                    nameTheme("simple");
                     break;
 
                 case R.id.main_card_sports:
-                    startActivity(new Intent(MainActivity.this, SearchOptionsActivity.class));
+                    nameTheme("sports");
                     break;
 
                 case R.id.main_card_singer:
-                    startActivity(new Intent(MainActivity.this, SearchOptionsActivity.class));
+                    nameTheme("singer");
                     break;
 
                 case R.id.main_card_random:
-                    startActivity(new Intent(MainActivity.this, SearchOptionsActivity.class));
+                    nameTheme("random");
                     break;
             }
         }
     };
+
+    private void nameTheme(String theme) {
+        Intent i = new Intent(MainActivity.this, SearchOptionsActivity.class);
+        i.putExtra("NameTheme", theme);
+        startActivity(i);
+    }
 }

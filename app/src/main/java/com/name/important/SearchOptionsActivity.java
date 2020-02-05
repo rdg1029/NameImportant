@@ -1,8 +1,10 @@
 package com.name.important;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +16,31 @@ public class SearchOptionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_options);
 
+        setNameThemeTitle();
         setAlphabetSpinner();
+    }
+
+    private void setNameThemeTitle() {
+        TextView nameThemeTitle = findViewById(R.id.search_options_name_theme);
+        Intent i = getIntent();
+
+        switch (i.getStringExtra("NameTheme")) {
+            case "simple":
+                nameThemeTitle.setText("간단한 영어 이름");
+                break;
+
+            case "sports":
+                nameThemeTitle.setText("스포츠 선수 이름");
+                break;
+
+            case "singer":
+                nameThemeTitle.setText("유명 가수 이름");
+                break;
+
+            case "random":
+                nameThemeTitle.setText("랜덤 이름 찾기");
+                break;
+        }
     }
 
     private void setAlphabetSpinner() {
