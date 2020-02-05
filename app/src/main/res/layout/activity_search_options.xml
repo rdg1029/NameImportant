@@ -37,34 +37,32 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorMain" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/main_radio_gender"
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <Button
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="남자" />
+                    android:text="Male"
+                    android:id="@+id/main_radio_male" />
 
-                <Button
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="여자" />
+                    android:text="Female"
+                    android:id="@+id/main_radio_female" />
 
-            </LinearLayout>
+            </RadioGroup>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="모두 보기"
-                android:textStyle="bold"
-                android:textColor="@color/colorMain"
-                android:checked="true"/>
+                android:text="All Genders"
+                android:id="@+id/main_check_allgender" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,6 +91,12 @@
                     android:layout_marginLeft="20sp"
                     android:spinnerMode="dialog" />
             </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:id="@+id/main_btn_next" />
 
         </LinearLayout>
 

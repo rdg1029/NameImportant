@@ -2,7 +2,13 @@ package com.name.important;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -11,13 +17,80 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class SearchOptionsActivity extends AppCompatActivity {
+    String selectedGender = "";
+
+    Button btnNext;
+    CheckBox checkAllGender;
+    RadioButton radioFemale;
+    RadioButton radioMale;
+    RadioGroup radioGender;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_options);
 
+        btnNext = findViewById(R.id.main_btn_next);
+        checkAllGender = findViewById(R.id.main_check_allgender);
+        radioGender = findViewById(R.id.main_radio_gender);
+        radioFemale = findViewById(R.id.main_radio_female);
+        radioMale = findViewById(R.id.main_radio_male);
+
         setNameThemeTitle();
         setAlphabetSpinner();
+        updateGenderMenus();
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                intent.putExtra("GENDER", selectedGender);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void updateGenderMenus(){
+        radioMale.setChecked(true);
+        selectedGender = "MALE";
+
+        checkAllGender.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    radioFemale.setEnabled(false);
+                    radioMale.setEnabled(false);
+
+                    selectedGender = "ALL";
+                }else{
+                    radioFemale.setEnabled(true);
+                    radioMale.setEnabled(true);
+
+                    switch(radioGender.getCheckedRadioButtonId()){
+                        case R.id.main_radio_female:
+                            selectedGender = "FEMALE";
+                            break;
+                        case R.id.main_radio_male:
+                            selectedGender = "MALE";
+                            break;
+                    }
+                }
+            }
+        });
+
+        radioGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.main_radio_female:
+                        selectedGender = "FEMALE";
+                        break;
+                    case R.id.main_radio_male:
+                        selectedGender = "MALE";
+                        break;
+                }
+            }
+        });
     }
 
     private void setNameThemeTitle() {
