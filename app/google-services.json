@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "880021491619",
+    "firebase_url": "https://name-imprtant.firebaseio.com",
+    "project_id": "name-imprtant",
+    "storage_bucket": "name-imprtant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880021491619:android:982b4ae29f0e88631d1416",
+        "android_client_info": {
+          "package_name": "com.defcon.nameimportantdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880021491619-33bn96146mtr0ddmdckg4g5iqsqoge6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGzwZUrVtvJOwYYNgsWuLNUSecEf-8AMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880021491619-33bn96146mtr0ddmdckg4g5iqsqoge6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880021491619:android:cae31f231dd08c2e1d1416",
+        "android_client_info": {
+          "package_name": "com.name.important"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880021491619-33bn96146mtr0ddmdckg4g5iqsqoge6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGzwZUrVtvJOwYYNgsWuLNUSecEf-8AMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880021491619-33bn96146mtr0ddmdckg4g5iqsqoge6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
