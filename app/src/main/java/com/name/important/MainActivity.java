@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(this, SplashActivity.class));
+        //startActivity(new Intent(this, SplashActivity.class));
 
         findViewById(R.id.main_card_name).setOnClickListener(cardViewClickListener);
         findViewById(R.id.main_card_random).setOnClickListener(cardViewClickListener);

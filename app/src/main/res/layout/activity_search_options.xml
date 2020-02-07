@@ -81,8 +81,7 @@
                     android:text="♂"
                     android:textSize="100dp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorMain"
-                    android:background="@drawable/radio_button_bg"
+                    android:textColor="#00aedb"
                     android:id="@+id/main_radio_male" />
 
                 <RadioButton
@@ -95,8 +94,7 @@
                     android:text="♀"
                     android:textSize="100dp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorMain"
-                    android:background="@drawable/radio_button_bg"
+                    android:textColor="#d11141"
                     android:id="@+id/main_radio_female" />
 
             </RadioGroup>
@@ -115,7 +113,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="25dp"
                 android:layout_marginLeft="20dp"
                 android:orientation="horizontal">

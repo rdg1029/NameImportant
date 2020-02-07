@@ -12,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,12 +44,19 @@ public class SearchOptionsActivity extends AppCompatActivity {
         setAlphabetSpinner();
         updateGenderMenus();
 
+        final Intent i = getIntent();
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                 intent.putExtra("GENDER", selectedGender);
-                startActivity(intent);
+                intent.putExtra("NameTheme", i.getStringExtra("NameTheme"));
+                if(i.getStringExtra("NameTheme").equals("random")) {
+                    Toast.makeText(getApplicationContext(), "준비중입니다", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -70,8 +78,8 @@ public class SearchOptionsActivity extends AppCompatActivity {
                 }else{
                     radioFemale.setEnabled(true);
                     radioMale.setEnabled(true);
-                    radioFemale.setTextColor(Color.parseColor("#28cbaf"));
-                    radioMale.setTextColor(Color.parseColor("#28cbaf"));
+                    radioFemale.setTextColor(Color.parseColor("#d11141"));
+                    radioMale.setTextColor(Color.parseColor("#00aedb"));
 
                     switch(radioGender.getCheckedRadioButtonId()){
                         case R.id.main_radio_female:

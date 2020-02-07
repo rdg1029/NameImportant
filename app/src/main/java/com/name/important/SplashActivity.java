@@ -48,6 +48,7 @@ public class SplashActivity extends Activity {
             public void run() {
 //                Intent signInIntent = googleSignInClient.getSignInIntent();
 //                startActivityForResult(signInIntent, RC_SIGN_IN);
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
             }
         }, 1500);
