@@ -1,6 +1,7 @@
 package com.name.important;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,12 +15,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class SearchOptionsActivity extends AppCompatActivity {
     String selectedGender = "";
 
-    Button btnNext;
+    FloatingActionButton btnNext;
     CheckBox checkAllGender;
     RadioButton radioFemale;
     RadioButton radioMale;
@@ -60,11 +63,15 @@ public class SearchOptionsActivity extends AppCompatActivity {
                 if(isChecked){
                     radioFemale.setEnabled(false);
                     radioMale.setEnabled(false);
+                    radioFemale.setTextColor(Color.parseColor("#bfbfbf"));
+                    radioMale.setTextColor(Color.parseColor("#bfbfbf"));
 
                     selectedGender = "ALL";
                 }else{
                     radioFemale.setEnabled(true);
                     radioMale.setEnabled(true);
+                    radioFemale.setTextColor(Color.parseColor("#28cbaf"));
+                    radioMale.setTextColor(Color.parseColor("#28cbaf"));
 
                     switch(radioGender.getCheckedRadioButtonId()){
                         case R.id.main_radio_female:
@@ -118,6 +125,10 @@ public class SearchOptionsActivity extends AppCompatActivity {
 
     private void setAlphabetSpinner() {
         ArrayList<String> alphabetArray = new ArrayList<>();
+        Intent i = getIntent();
+        if(i.getStringExtra("NameTheme").equals("random")) {
+            alphabetArray.add("랜덤");
+        }
         alphabetArray.add("A");
         alphabetArray.add("B");
         alphabetArray.add("C");

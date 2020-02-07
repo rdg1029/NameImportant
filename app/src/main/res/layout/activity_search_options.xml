@@ -17,6 +17,17 @@
         android:textStyle="bold"
         android:textColor="@color/colorMain"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="이름을 찾기 전에\n몇 가지만 알려주세요!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorMain"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,16 +37,32 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="25dp"
-                android:gravity="center_horizontal"
-                android:text="성별 선택"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="@color/colorMain" />
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="성별"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorMain" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Gender"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorMain"/>
+
+            </LinearLayout>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -47,33 +74,70 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male"
+                    android:layout_marginRight="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:text="♂"
+                    android:textSize="100dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorMain"
+                    android:background="@drawable/radio_button_bg"
                     android:id="@+id/main_radio_male" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Female"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:text="♀"
+                    android:textSize="100dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorMain"
+                    android:background="@drawable/radio_button_bg"
                     android:id="@+id/main_radio_female" />
 
             </RadioGroup>
 
             <CheckBox
+                android:id="@+id/main_check_allgender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All Genders"
-                android:id="@+id/main_check_allgender" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="25dp"
-                android:gravity="center_horizontal"
-                android:text="알파벳 선택"
-                android:textSize="25sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="> 무작위로 보기"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorMain" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="알파벳"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorMain" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Alphabet"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorMain"/>
+
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -92,10 +156,12 @@
                     android:spinnerMode="dialog" />
             </androidx.cardview.widget.CardView>
 
-            <Button
-                android:layout_width="match_parent"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Next"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:src="@drawable/ic_keyboard_arrow_right_24px"
                 android:id="@+id/main_btn_next" />
 
         </LinearLayout>
