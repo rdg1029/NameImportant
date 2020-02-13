@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -75,15 +74,15 @@ public class SplashActivity extends Activity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    String cu = firebaseAuth.getUid();
-                    String userName = user.getDisplayName();
-
-                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                    intent.putExtra("cu", cu);
+                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                    String userID = firebaseAuth.getUid();
+                    String userName = firebaseUser.getDisplayName();
 
                     Toast.makeText(getApplicationContext(), "로그인애 성공하였습니다.\n" + userName + "님, 환영합니다!", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    intent.putExtra("cu", userID);
+                    startActivity(intent);
                     finish();
                 }
                 else {
