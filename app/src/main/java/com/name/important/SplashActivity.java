@@ -46,10 +46,8 @@ public class SplashActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-//                Intent signInIntent = googleSignInClient.getSignInIntent();
-//                startActivityForResult(signInIntent, RC_SIGN_IN);
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
+                Intent signInIntent = googleSignInClient.getSignInIntent();
+                startActivityForResult(signInIntent, RC_SIGN_IN);
             }
         }, 1500);
     }
@@ -79,12 +77,13 @@ public class SplashActivity extends Activity {
                 if(task.isSuccessful()) {
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     String cu = firebaseAuth.getUid();
-//                    String email = firebaseAuth.getCurrentUser().getEmail();
+                    String email = user.getEmail();
 
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     intent.putExtra("cu", cu);
 
-//                    Toast.makeText(getApplicationContext(), "로그인 성공\n" + email, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "로그인 성공\n" + email, Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
                 else {
