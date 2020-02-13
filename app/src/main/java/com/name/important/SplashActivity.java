@@ -77,17 +77,18 @@ public class SplashActivity extends Activity {
                 if(task.isSuccessful()) {
                     FirebaseUser user = firebaseAuth.getCurrentUser();
                     String cu = firebaseAuth.getUid();
-                    String email = user.getEmail();
+                    String userName = user.getDisplayName();
 
                     Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     intent.putExtra("cu", cu);
 
-                    Toast.makeText(getApplicationContext(), "로그인 성공\n" + email, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "로그인애 성공하였습니다.\n" + userName + "님, 환영합니다!", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     finish();
                 }
                 else {
-                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
             }
         });
